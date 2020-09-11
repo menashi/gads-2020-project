@@ -1,1 +1,1 @@
-# menashi-gads-2020-project
+# Menashi's GADS 2020 Phase 2 Project Submission
