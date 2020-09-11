@@ -13,7 +13,7 @@
 </details>
 
 <details>
-  <summary>Configuring an Internal Load Balancer </summary>
+  <summary>Configuring an HTTP Load Balancer with Autoscaling</summary>
   <img src="Screenshots/configuring-an-http-load-balancer-with-autoscaling.PNG">
 </details>
 
@@ -71,6 +71,7 @@
   <summary>VPC Networking</summary>
   <img src="Screenshots/vpc-networking.PNG">
 </details>
+
 ## Translation Code
 
 [Google Cloud Fundamentals: Getting Started with Compute Engine](lab-1-creating-vms.md)
