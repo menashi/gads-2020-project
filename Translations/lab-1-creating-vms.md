@@ -1,17 +1,17 @@
 #LAB: Google Cloud Fundamentals: Getting Started with Compute Engine
-##OBJECTIVES
+## OBJECTIVES
 	- Create a Compute Engine virtual machine using the Google Cloud Platform (GCP) Console.
 	- Create a Compute Engine virtual machine using the gcloud command-line interface.
 	- Connect between the two instances.
 
-##STEPS:
-1. Create a Compute Engine virtual machine using the Google Cloud Platform (GCP) Console.
+## STEPS:
+## 1. Create a Compute Engine virtual machine using the Google Cloud Platform (GCP) Console.
 	- To create the VM instance called my-vm-1
 		gcloud beta compute --project=qwiklabs-gcp-03-d58112a0b586 instances create my-vm-1 --zone=us-central1-a --machine-type=e2-medium --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=347301316199-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server --image=debian-9-stretch-v20200910 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=my-vm-1 --reservation-affinity=any
 	- Set the firewall rule that allows HTTP traffic
 		gcloud compute --project=qwiklabs-gcp-03-d58112a0b586 firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
 
-2. Create a Compute Engine virtual machine using the gcloud command-line interface.
+## 2. Create a Compute Engine virtual machine using the gcloud command-line interface.
 	- To display a list of all the zones in the region us-central1
 		gcloud compute zones list | grep us-central1
 	- To set your default zone, to the zone you wouldve selected.
@@ -23,7 +23,7 @@
 			--image "debian-9-stretch-v20190213" \
 			--subnet "default"
 
-3. Connect between the two instances.
+## 3. Connect between the two instances.
 ## Use PING command to reach the target VM
 	- From my-vm-2
 		gcloud beta compute ssh --zone "us-central1-a" "my-vm-2" --project "qwiklabs-gcp-03-d58112a0b586"
