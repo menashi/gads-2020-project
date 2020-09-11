@@ -3,7 +3,7 @@
 	- Provision a Kubernetes cluster using Kubernetes Engine.
 	- Deploy and manage Docker containers using kubectl.
 ## STEPS
-1. Provision a Kubernetes cluster using Kubernetes Engine.
+## 1. Provision a Kubernetes cluster using Kubernetes Engine.
 	- Confirm that needed APIs are enabled
 		gcloud services list --available
 			Scroll down in the list of enabled APIs, and confirm that both of these APIs are enabled:
@@ -19,7 +19,7 @@
 	- View your running nodes
 		gcloud compute instances list
 		
-2. Deploy and manage Docker containers using kubectl.
+## 2. Deploy and manage Docker containers using kubectl.
 	- Run and deploy a container, launch a single instance of the nginx container. (Nginx is a popular web server.)
 		kubectl create deploy nginx --image=nginx:1.17.10
 	- View the pod running the nginx container
